@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--color-background);
+  border-radius: var(--spacing-xxxx-small);
+  box-shadow: 0 0 var(--spacing-xxxx-small) var(--color-foreground);
+  padding: var(--spacing-x-small);
+}
+
+.header {
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  color: var(--color-foreground);
+  margin-top: var(--spacing-xxx-small);
+  font-size: 1em;
+}
+
+.title {
+  color: var(--color-foreground);
+  font-size: 1.2em;
+  margin-right: var(--spacing-xx-small);
+}
