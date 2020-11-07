@@ -1,0 +1,41 @@
+.content {
+  display: flex;
+}
+
+:root {
+  /* Colors */
+  --color-primary: #211a1d;
+  --color-secondary: #f8f0fb;
+  --color-background: var(--color-primary);
+  --color-foreground: var(--color-secondary);
+  --color-accent: #6320ee;
+  --color-x-accent: #8075ff;
+  --color-contrast: #cad5ca;
+  --color-x-contrast: #f8f0fb;
+  /* Spacing */
+  --spacing-xxxx-small: 4px;
+  --spacing-xxx-small: 8px;
+  --spacing-xx-small: 12px;
+  --spacing-x-small: 16px;
+  --spacing-small: 20px;
+  --spacing-regular: 24px;
+  --spacing-large: 32px;
+  --spacing-x-large: 36px;
+  --spacing-xx-large: 40px;
+  --spacing-xxx-large: 44px;
+  --spacing-xxxx-large: 48px;
+  /* Border */
+  --radius-small: 8px;
+  --radius-regular: 16px;
+  --radius-large: 48px;
+  /* Fonts */
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weigth-light: 300;
+  /* Button */
+  --button-size-small: 44px;
+  --button-size-regular: 60px;
+  --button-size-large: 80px;
+  --button-width: 320px;
+  --button-height: 44px;
+}
