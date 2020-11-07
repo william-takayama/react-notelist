@@ -1,0 +1,24 @@
+.notelist {
+  background-color: var(--color-background);
+  display: grid;
+  flex-grow: 3;
+  grid-template-columns: auto auto auto auto auto;
+  list-style-type: none;
+  padding-left: var(--spacing-regular);
+  padding-top: var(--spacing-regular);
+}
+
+.cardTitle {
+  margin-bottom: var(--spacing-xx-small);
+  color: var(--color-foreground);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+}
+
+.item {
+  margin: 0 var(--spacing-xx-small);
+  max-width: 240px;
+  max-height: 400px;
+  display: inline;
+}
