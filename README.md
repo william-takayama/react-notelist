@@ -33,7 +33,7 @@
   
 ## :feet: How to clone or run?
   - Download the zip or clone using github
-  - In the server-petshop folder run in your command line ``` npm start ```
+  - In the main folder run in your command line ``` npm start ```
  
 ## :metal: Contributions
 Pull requests are always welcomed. For major alterations please think about openning an issue first.
