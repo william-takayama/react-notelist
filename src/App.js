@@ -9,11 +9,27 @@ import classes from './assets/App.module.scss';
  */
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      notes: [],
+    };
+  }
+
+  createNote(title, text) {
+    const newNote = { title, text };
+    const newArrayOfNotes = [...this.state.notes, newNote];
+    const newState = {
+      notes: newArrayOfNotes,
+    };
+    this.setState(newState);
+  }
+
   render() {
     return (
       <section className={classes.content}>
-        <Form />
-        <NoteList />
+        <Form createNote={this.createNote.bind(this)} />
+        <NoteList notes={this.state.notes} />
       </section>
     );
   }

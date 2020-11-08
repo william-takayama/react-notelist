@@ -6,9 +6,9 @@ export default class NoteCard extends Component {
     return (
       <section className={classes.card}>
         <header className={classes.header}>
-          <h3 className={classes.title}>Title</h3>
+          <h3 className={classes.title}>{this.props.title}</h3>
         </header>
-        <p className={classes.text}>Write your note</p>
+        <p className={classes.text}>{this.props.text}</p>
       </section>
     );
   }
