@@ -19,6 +19,9 @@
   - Prettier
   - Github
   - VSCode (Editor)
+<p align="center">
+  <img alt="notelist developed using React" src="https://i.imgur.com/yd8tdai.png" width="760px" />
+</p>
 
 ## :rocket: Goal:
   Solidify my knowlodge in React using Class Components to understand better the react basis.
