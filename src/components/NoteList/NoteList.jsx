@@ -11,7 +11,12 @@ export default class NoteList extends Component {
         {this.props.notes.map((note, index) => (
           <li key={index} className={classes.item}>
             <div className={classes.cardTitle}>{note.title}</div>
-            <NoteCard title={note.title} text={note.text} />
+            <NoteCard
+              index={index}
+              title={note.title}
+              text={note.text}
+              deleteNote={this.props.deleteNote}
+            />
           </li>
         ))}
       </ul>
