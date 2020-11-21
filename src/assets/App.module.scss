@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.mainContent {
+  flex-grow: 3;
+}
+
 :root {
   /* Colors */
   --color-primary: #211a1d;
@@ -12,22 +16,26 @@
   --color-x-accent: #8075ff;
   --color-contrast: #cad5ca;
   --color-x-contrast: #f8f0fb;
+  /* Size */
+  --size-small: 12px;
+  --size-regular: 24px;
+  --size-large: 48px;
   /* Spacing */
   --spacing-xxxx-small: 4px;
   --spacing-xxx-small: 8px;
-  --spacing-xx-small: 12px;
+  --spacing-xx-small: var(--size-small);
   --spacing-x-small: 16px;
   --spacing-small: 20px;
-  --spacing-regular: 24px;
+  --spacing-regular: var(--size-regular);
   --spacing-large: 32px;
   --spacing-x-large: 36px;
   --spacing-xx-large: 40px;
   --spacing-xxx-large: 44px;
-  --spacing-xxxx-large: 48px;
+  --spacing-xxxx-large: var(--size-large);
   /* Border */
   --radius-small: 8px;
   --radius-regular: 16px;
-  --radius-large: 48px;
+  --radius-large: var(--size-large);
   /* Fonts */
   --font-weight-bold: 700;
   --font-weight-regular: 400;
