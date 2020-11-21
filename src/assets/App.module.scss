@@ -6,6 +6,12 @@
   flex-grow: 3;
 }
 
+.mainCategories {
+  width: 50%;
+  background-color: var(--color-background);
+  padding: var(--spacing-xx-small) var(--spacing-xx-large);
+}
+
 :root {
   /* Colors */
   --color-primary: #211a1d;

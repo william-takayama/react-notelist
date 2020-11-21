@@ -19,6 +19,7 @@ export default class NoteCard extends Component {
               width: 'var(--size-small)',
             }}
           />
+          <h4 className={classes.title}>{this.props.category}</h4>
         </header>
         <p className={classes.text}>{this.props.text}</p>
       </section>
