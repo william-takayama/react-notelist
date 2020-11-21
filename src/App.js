@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Form from './components/Form';
 import NoteList from './components/NoteList';
 import CategoryList from './components/CategoryList';
-import classes from './assets/App.module.scss';
+import classes from './styles/App.module.scss';
 
 /**
  * react -libray
