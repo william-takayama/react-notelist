@@ -12,6 +12,20 @@ export default class Form extends Component {
     this.title = '';
     this.text = '';
     this.category = 'No category';
+    this.state = { categories: [] };
+    this._newCategories = this._newCategories.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.categories.subscribe(this._newCategories);
+  }
+
+  componentWillUnmount() {
+    this.props.categories.unsubscribe(this._newCategories);
+  }
+
+  _newCategories(categories) {
+    this.setState({ ...this.state.categories, categories });
   }
 
   _handleOnChangeTitle(event) {
@@ -38,20 +52,16 @@ export default class Form extends Component {
 
   render() {
     return (
-      <form
-        action=""
-        className={classes.form}
-        onSubmit={this._createNote.bind(this)}
-      >
+      <form className={classes.form} onSubmit={this._createNote.bind(this)}>
         <select
           onChange={this._handleOnChangeCategory.bind(this)}
-          className={classes.selectInput}
+          className={classes.input}
           name="category-input"
         >
           <option defaultChecked value="No category">
-            No category
+            {this.category}
           </option>
-          {this.props.categories.map((category, index) => {
+          {this.state.categories.map((category, index) => {
             return (
               <option key={index} value={category}>
                 {category}
@@ -61,16 +71,12 @@ export default class Form extends Component {
         </select>
         <input
           type="text"
-          name=""
-          id=""
           placeholder="title"
           className={classes.input}
           onChange={this._handleOnChangeTitle.bind(this)}
         />
         <textarea
           placeholder="Write your note..."
-          name=""
-          id=""
           cols={30}
           rows={15}
           className={classes.input}

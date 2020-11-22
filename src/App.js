@@ -3,6 +3,8 @@ import Form from './components/Form';
 import NoteList from './components/NoteList';
 import CategoryList from './components/CategoryList';
 import classes from './styles/App.module.scss';
+import Categories from './data/Categories';
+import ArrayOfNotes from './data/Notes';
 
 /**
  * react -libray
@@ -12,52 +14,25 @@ import classes from './styles/App.module.scss';
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      notes: [],
-      categories: ['Games', 'Music'],
-    };
-  }
-
-  createNote(title, text, category) {
-    const newNote = { title, text, category };
-    const newArrayOfNotes = [...this.state.notes, newNote];
-    const newState = {
-      notes: newArrayOfNotes,
-    };
-    this.setState(newState);
-  }
-
-  deleteNote(index) {
-    let arrayOfNotes = this.state.notes;
-    arrayOfNotes.splice(index, 1);
-    this.setState({
-      notes: arrayOfNotes,
-    });
-  }
-
-  addCategory(category) {
-    const newArrayOfCategories = [...this.state.categories, category];
-    const newState = {
-      categories: newArrayOfCategories,
-    };
-    this.setState(newState);
+    this.categories = new Categories();
+    this.notes = new ArrayOfNotes();
   }
 
   render() {
     return (
       <section className={classes.content}>
         <Form
-          categories={this.state.categories}
-          createNote={this.createNote.bind(this)}
+          categories={this.categories}
+          createNote={this.notes.createNote.bind(this.notes)}
         />
         <main className={classes.mainCategories}>
           <CategoryList
-            addCategory={this.addCategory.bind(this)}
-            categories={this.state.categories}
+            addCategory={this.categories.addCategory.bind(this.categories)}
+            categories={this.categories}
           />
           <NoteList
-            notes={this.state.notes}
-            deleteNote={this.deleteNote.bind(this)}
+            notes={this.notes}
+            deleteNote={this.notes.deleteNote.bind(this.notes)}
           />
         </main>
       </section>
