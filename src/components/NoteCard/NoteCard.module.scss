@@ -10,20 +10,30 @@
 }
 
 .header {
-  font-size: 1.1em;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.title,
 .text {
   color: var(--color-foreground);
-  margin-top: var(--spacing-xxx-small);
-  font-size: 1em;
 }
 
-.title {
-  color: var(--color-foreground);
-  font-size: 1.2em;
-  margin-right: var(--spacing-xx-small);
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  max-width: 90px;
+  background-color: var(--color-x-accent);
+  padding: var(--spacing-xxxx-small);
+  border-radius: calc(var(--radius-small) / 2);
+}
+
+.description {
+  margin-top: var(--spacing-xxx-small);
 }

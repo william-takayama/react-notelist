@@ -1,3 +1,30 @@
+.sectionList {
+  display: flex;
+  flex-flow: column;
+}
+
 .categoryList {
+  color: var(--color-foreground);
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-bottom: var(--spacing-x-small);
+}
+
+.item {
+  margin: var(--spacing-xxxx-small);
+  padding: calc(var(--size-small) / 2) var(--size-small);
+  background-color: var(--color-x-accent);
+  color: var(--color-foreground);
+  border-radius: var(--radius-small);
+  text-transform: uppercase;
+}
+
+.input {
+  padding: var(--spacing-xxx-small);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--color-x-accent);
+  background-color: var(--color-background);
   color: var(--color-foreground);
 }

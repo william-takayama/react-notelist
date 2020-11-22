@@ -13,10 +13,9 @@
   margin-top: var(--spacing-xxx-small);
   padding: var(--spacing-xxxx-small);
   border: none;
+  border-radius: calc(var(--radius-small) / 2);
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: var(--font-weight-light);
 }
 
@@ -26,15 +25,18 @@
   align-items: center;
   width: 30%;
   cursor: pointer;
+  border: 1px solid var(--color-primary);
   margin-top: var(--spacing-xx-small);
   min-width: var(--button-width);
   height: var(--button-height);
   border-radius: var(--radius-large);
   font-weight: var(--font-weight-regular);
-  background-color: var(--color-contrast);
+  background-color: var(--color-x-contrast);
   color: var(--color-primary);
 
-  &:active {
-    background-color: var(--color-accent);
+  &:hover {
+    background-color: var(--color-x-accent);
+    border: 1px solid var(--color-contrast);
+    color: var(--color-foreground);
   }
 }

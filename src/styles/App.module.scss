@@ -1,9 +1,24 @@
-.content {
-  display: flex;
+@import '../assets/fonts/fonts.scss';
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: var(--typography-heading#{$i}-family);
+    font-size: var(--typography-heading#{$i}-size);
+    font-weight: var(--typography-heading#{$i}-weight);
+    line-height: var(--typography-heading#{$i}-height);
+  }
 }
 
-.mainContent {
-  flex-grow: 3;
+body {
+  font-family: var(--typography-body-family);
+  font-size: var(--typography-body-size);
+  font-weight: var(--typography-body-wfont-weight);
+  font-weight: 400;
+  letter-spacing: 0.005rem;
+}
+
+.content {
+  display: flex;
 }
 
 .mainCategories {
@@ -42,14 +57,39 @@
   --radius-small: 8px;
   --radius-regular: 16px;
   --radius-large: var(--size-large);
-  /* Fonts */
-  --font-weight-bold: 700;
-  --font-weight-regular: 400;
-  --font-weigth-light: 300;
   /* Button */
   --button-size-small: 44px;
   --button-size-regular: 60px;
   --button-size-large: 80px;
   --button-width: 320px;
   --button-height: 44px;
+  /* Typography */
+  /* HEADING */
+  --typography-heading1-family: 'Barlow Condensed', sans-serif;
+  --typography-heading1-size: 3.5rem;
+  --typography-heading1-weight: 600;
+
+  --typography-heading2-family: var(--typography-heading1-family);
+  --typography-heading2-size: 3rem;
+  --typography-heading2-weight: var(--typography-heading1-weight);
+
+  --typography-heading3-family: var(--typography-heading1-family);
+  --typography-heading3-size: 2.5rem;
+  --typography-heading3-weight: var(--typography-heading1-weight);
+
+  --typography-heading4-family: var(--typography-heading1-family);
+  --typography-heading4-size: 2rem;
+  --typography-heading4-weight: var(--typography-heading1-weight);
+
+  --typography-heading5-family: var(--typography-heading1-family);
+  --typography-heading5-size: 1.5rem;
+  --typography-heading5-weight: var(--typography-heading1-weight);
+
+  --typography-heading6-family: var(--typography-heading1-family);
+  --typography-heading6-size: 1rem;
+  --typography-heading6-weight: var(--typography-heading1-weight);
+
+  --typography-body-family: 'Poppins', sans-serif;
+  --typography-body-size: 14px;
+  --typography-body-weight: 300;
 }

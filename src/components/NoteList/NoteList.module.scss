@@ -1,10 +1,9 @@
 .notelist {
   background-color: var(--color-background);
   display: grid;
-  flex-grow: 3;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: repeat(3, auto);
+  gap: var(--spacing-xx-small);
   list-style-type: none;
-  padding-left: var(--spacing-regular);
   padding-top: var(--spacing-regular);
 }
 
@@ -17,7 +16,6 @@
 }
 
 .item {
-  margin: 0 var(--spacing-xx-small);
   max-width: 240px;
   max-height: 400px;
   display: inline;
